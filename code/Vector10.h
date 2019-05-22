@@ -9,6 +9,6 @@ public:
 
 private:
     int arr[10];
-}
+};
 
 #endif  // VECTOR10_H__

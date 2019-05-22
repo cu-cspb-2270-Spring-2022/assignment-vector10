@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../code/mycalc.h"
+#include "../code/Vector10.h"
 
 using namespace std;
 
@@ -11,9 +11,6 @@ int main(){
     cin >> var;
     cout << "your number was : " << var << endl;
 
-    // create an object of mycalc and call its member function
-    mycalc casio;
-    casio.sub(var,2);
-    
+
     return 0;
 }

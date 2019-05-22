@@ -6,7 +6,7 @@
 #include <fstream>
 #include <iostream>
 
-class Vector10 : public ::testing::Test {
+class test_Vector10 : public ::testing::Test {
 protected:
 	static void SetUpTestCase(){
 	}
@@ -34,14 +34,13 @@ protected:
 	// this function runs after ever TEST_F function
 	void TearDown() override {}
 	
-	mycalc mycalcobj;
+    Vector10 testvec;
 	static int total_grade;
 };
 
-int mycalcTest::total_grade = 0;
+int test_Vector10::total_grade = 0;
 
-TEST_F(Vector10, Initialization){
-    Vector10 testvec;
+TEST_F(test_Vector10, Initialization){
     for(int ii=0; ii<10; ii++){
         EXPECT_EQ(0,testvec.ValueAt(ii));
         add_points_to_grade(10);
