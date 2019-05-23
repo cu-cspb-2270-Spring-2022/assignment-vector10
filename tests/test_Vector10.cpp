@@ -7,6 +7,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <math.h>
 
 class test_Vector10 : public ::testing::Test {
 protected:
@@ -19,14 +20,15 @@ protected:
 		if(outgrade.is_open())
 		outgrade.clear();
 
-		outgrade << total_grade;
+		outgrade << (int)std::ceil(100*total_grade/max_grade);
 		outgrade.close();
 
-		std::cout << "Total Grade is : " << total_grade << std::endl;
+		std::cout << "Total Grade is : " << (int)std::ceil(100*total_grade/max_grade) << std::endl;
 	}
 
 	// This function runs after all TEST_F functions have been executed
 	void add_points_to_grade(int points){
+		max_grade += points;
 		if(!::testing::Test::HasFailure()){
 			total_grade += points;
 		}
@@ -39,9 +41,11 @@ protected:
 	void TearDown() override {}
 	
 	static int total_grade;
+	static int max_grade;
 };
 
 int test_Vector10::total_grade = 0;
+int test_Vector10::max_grade = 0;
 
 TEST_F(test_Vector10, Initialization){
     Vector10 testvec;
@@ -99,7 +103,7 @@ TEST_F(test_Vector10, TestCountEmpty){
 	testvec.PushBack(22);
 	testvec.PushBack(150);
 	testvec.PushBack(90);
-	EXPECT_EQ(5,testvec.CountEmpty());
+	EXPECT_EQ(6,testvec.CountEmpty());
 	add_points_to_grade(2);
 }
 
