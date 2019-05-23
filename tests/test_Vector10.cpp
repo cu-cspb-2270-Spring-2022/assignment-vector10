@@ -1,5 +1,7 @@
 
-// gtest/gtest.h must be included here
+// If you change anything in this file, your changes will be ignored 
+// in your homework submission.
+// Chekout TEST_F functions bellow to learn what is being tested.
 #include <gtest/gtest.h>
 #include "../code/Vector10.h"
 
@@ -43,7 +45,7 @@ int test_Vector10::total_grade = 0;
 TEST_F(test_Vector10, Initialization){
     for(int ii=0; ii<10; ii++){
         EXPECT_EQ(0,testvec.ValueAt(ii));
-        add_points_to_grade(10);
     }
+    add_points_to_grade(100);
 }
 
