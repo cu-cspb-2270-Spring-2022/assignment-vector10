@@ -5,13 +5,15 @@ Vector10::Vector10(){
 }
 
 Vector10::~Vector10(){
-    // YOUR CODE HERE
+    // You don't need to add anything here
 }
 
+// Implement this function first, since all tests use it.
 int Vector10::ValueAt(int index){
     // YOUR CODE HERE
 }
 
+// Implement this function second, since most tests use it.
 bool Vector10::PushBack(int value){
     // YOUR CODE HERE
 }
