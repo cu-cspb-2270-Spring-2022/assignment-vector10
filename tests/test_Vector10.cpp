@@ -136,8 +136,9 @@ TEST_F(test_Vector10, TestRemove){
 	EXPECT_EQ(false,testvec.Remove(200));
 	add_points_to_grade(2);
 
-	EXPECT_EQ(true,testvec.Remove(2));
+	EXPECT_EQ(true,testvec.Remove(12));
 	add_points_to_grade(2);
 
 	EXPECT_EQ(1000,testvec.ValueAt(3));
+	add_points_to_grade(2);
 }

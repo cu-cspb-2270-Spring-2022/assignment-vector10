@@ -12,7 +12,8 @@ public:
     // get an index return the value of array at that index
     int ValueAt(int index);
 
-    // puts value in the last empty spot of array (back)
+    // puts value in the last empty spot of array (back), function returns false if
+    // array is already full and true if push was successful
     // data in array is always left alligned. check class video for details
     bool PushBack(int value);
 
@@ -25,6 +26,8 @@ public:
 
     // this function removes a value from array. (removal process includes 
     // shifting valid member on its right hand side to the left by one index)
+    // if requested item did not exist then function returns a false otherwise 
+    // removes the value and returns true.
     // check class video for details.
     bool Remove(int index);
 
@@ -32,7 +35,6 @@ public:
 
 private:
     int arr[10];
-    int pb_index;
     // you can add add more private member variables and member functions here if you need
 };
 
