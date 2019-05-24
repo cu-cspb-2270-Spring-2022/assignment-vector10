@@ -28,7 +28,7 @@ Vector10.h          : Vector10 class heather file
 tests\              : Tests folder  
 test_Vector10.cpp   : Tests implemented for you / your personal tests  
 
-For your final submission you submitt Vector10.cpp and Vector10.h file. Any other changes in other folders will be ignored in grading process but feel free to change them if you want to test/debug something.
+For your final submission you submitt Vector10.cpp and Vector10.h files. Any other changes in other folders will be ignored in grading process but feel free to change them if you want to test/debug something.
 
 ## Where to Start
 Open a terminal window in Jupytherhub(recommended) or your personal linux/mac machine (no windows platforms). First pull the this repository by
@@ -69,7 +69,7 @@ app executable is also in this folder, you can run it by
 ```console
 jovyan@jupyter-yourcuid:~$ ./run_app
 ```
-you can debug in terminal by using gdb
+you can debug in terminal using gdb
 
 ## Dependencies
 you need ''gcc'' and ''cmake'' installed to be able to compile this code.
@@ -78,7 +78,9 @@ if you are using vscode environment in JupyterHub, you just need to make sure yo
 
 ## About This homework
 
-In this homework you need to write a class named Vector10 which handles some functionalitis for an array of size 10. Member functions of this class are give to you in the ''Vector10.h'' and ''Vector10.cpp'' files. There are comments above each function which explain the expectation from each function.
+In this homework you need to write a class named Vector10 which handles some functionalitis for an array of size 10. Member functions of this class are given to you in the ''Vector10.h'' and ''Vector10.cpp'' files. There are comments above each function which explain the expectation from each function.
 
 the unit test file ''test_Vector10.cpp'' has all the tests for this class. 
-You must check every TEST_F file in order to figure what is expected from each member function. Make sure to check orientation video of the homework in moodle before you start with this homework.
+You must check every TEST_F function in order to figure what is expected from each test function. Make sure to check the orientation video of the homework in moodle before you start with this homework.
+
+You must first implement the ''ValueAt'' and ''PushBack'' member functions since those are required in all the tests.
