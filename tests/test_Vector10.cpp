@@ -49,6 +49,7 @@ int test_Vector10::max_grade = 0;
 
 TEST_F(test_Vector10, Initialization){
     Vector10 testvec;
+
     for(int ii=0; ii<10; ii++){
         EXPECT_EQ(0,testvec.ValueAt(ii));
     	add_points_to_grade(1);
@@ -56,7 +57,8 @@ TEST_F(test_Vector10, Initialization){
 }
 
 TEST_F(test_Vector10, TestPushBackNoRemoval){
-    Vector10 testvec;
+	Vector10 testvec;
+
 	testvec.PushBack(12);
 	testvec.PushBack(45);
 	testvec.PushBack(93);
@@ -80,6 +82,7 @@ TEST_F(test_Vector10, TestPushBackNoRemoval){
 
 TEST_F(test_Vector10, TestPushBackOverflow){
     Vector10 testvec;
+
 	for(int i=0; i<10; i++){
 		EXPECT_EQ(true,testvec.PushBack(i+12));
 		add_points_to_grade(0.3);
@@ -92,7 +95,7 @@ TEST_F(test_Vector10, TestPushBackOverflow){
 
 TEST_F(test_Vector10, TestCountEmpty){
     Vector10 testvec;
-	
+
 	EXPECT_EQ(10,testvec.CountEmpty());
 	add_points_to_grade(2);
 
@@ -138,6 +141,3 @@ TEST_F(test_Vector10, TestRemove){
 
 	EXPECT_EQ(1000,testvec.ValueAt(3));
 }
-
-
-
