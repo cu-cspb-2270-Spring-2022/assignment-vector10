@@ -26,8 +26,8 @@ public:
 
     // this function removes a value from array. (removal process includes 
     // shifting valid member on its right hand side to the left by one index)
-    // if requested item did not exist then function returns a false otherwise 
-    // removes the value and returns true.
+    // if requested index is not in the range of valid data locations then function returns a false otherwise 
+    // it removes the value and returns true.
     // check class video for details.
     bool Remove(int index);
 
