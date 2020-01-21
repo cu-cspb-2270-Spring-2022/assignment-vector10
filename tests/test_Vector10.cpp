@@ -7,7 +7,7 @@
 
 #include <fstream>
 #include <iostream>
-#include <cmath.h>
+#include <cmath>
 
 class test_Vector10 : public ::testing::Test {
 protected:
